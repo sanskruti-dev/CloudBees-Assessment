@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "6cf3284b-31c7-4a61-ad00-6effb8f9bad9",
+		"name": "Cloudbees Assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6948769"
+	},
+	"item": [
+		{
+			"name": "Submit Ticket",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"from\": \"BJP\",\n    \"to\": \"BLR\",\n    \"price\": 200,\n    \"section\": \"B\",\n    \"user\" : {\n        \"firstName\": \"Sanskruti\",\n        \"lastName\": \"Betageri\",\n        \"email\": \"sanskrutibetageri74@gmail.com\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cloudbees/api/v1/ticket",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cloudbees",
+						"api",
+						"v1",
+						"ticket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Ticket Receipt",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cloudbees/api/v1/ticket/1716836731779",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cloudbees",
+						"api",
+						"v1",
+						"ticket",
+						"1716836731779"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all users in section",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cloudbees/api/v1/section/A/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cloudbees",
+						"api",
+						"v1",
+						"section",
+						"A",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Ticket seat",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"section\": \"A\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cloudbees/api/v1/ticket/1716836731779",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cloudbees",
+						"api",
+						"v1",
+						"ticket",
+						"1716836731779"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete ticket by ticketid",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cloudbees/api/v1/ticket/1716836731779",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cloudbees",
+						"api",
+						"v1",
+						"ticket",
+						"1716836731779"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
