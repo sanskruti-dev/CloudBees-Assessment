@@ -62,7 +62,7 @@ public class TicketController {
         }
     }
 
-    public TicketResponse prepareTicketResponseError(CloudbeesException e) {
+    private TicketResponse prepareTicketResponseError(CloudbeesException e) {
         TicketResponse errorResponse = new TicketResponse();
         errorResponse.setCode(String.valueOf(e.getHttpErrorCode()));
         errorResponse.setMessage(e.getMessage());

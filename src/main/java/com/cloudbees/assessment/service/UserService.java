@@ -3,11 +3,9 @@ package com.cloudbees.assessment.service;
 import com.cloudbees.assessment.dtos.Ticket;
 import com.cloudbees.assessment.models.UserResponse;
 import com.cloudbees.assessment.repository.TicketRepository;
-import com.cloudbees.assessment.repository.UserRepository;
 import com.cloudbees.assessment.util.CloudbeesException;
 import com.cloudbees.assessment.util.DataValidator;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -16,9 +14,6 @@ import java.util.Map;
 
 @Service
 public class UserService {
-
-    @Autowired
-    private UserRepository userRepository;
 
     @Autowired
     private TicketRepository ticketRepository;
